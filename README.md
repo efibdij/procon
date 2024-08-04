@@ -11,4 +11,4 @@
 - Delete executable files and expanded files.
 
 `make veryclean`
-- Also delete the original code file.
+- Also delete original code files.
