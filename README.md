@@ -1,4 +1,4 @@
-# competitive programming environment
+# Competitive Programming Environment
 ### Usage
 ```make t=(your code file)```
 - No extension is required.
