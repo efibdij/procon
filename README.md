@@ -1,1 +1,1 @@
-# procon
+# competitive programming environment
