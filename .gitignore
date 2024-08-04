@@ -1,3 +1,6 @@
 *.cc
 *.out
+*.py
+*.txt
+in*
 ./sol
