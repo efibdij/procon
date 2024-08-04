@@ -8,7 +8,7 @@
 - The code that expands the library and adds input/output optimization is output to `sol/`.
 
 `make clean`
-- Delete executable files and expanded files.
+- Delete executable files and expanded code files.
 
 `make veryclean`
 - Also delete original code files.
