@@ -1,15 +1,15 @@
 #ifndef LIB_DSU_H_
 #define LIB_DSU_H_
 
-#include <vector>
 #include <cassert>
+#include <vector>
 
 namespace lib {
 
 class dsu {
 public:
-	dsu(): n_(0) {}
-	explicit dsu(int n): n_(n), data_(n, -1) {}
+	dsu(): n_(0), fsize_(0) {}
+	explicit dsu(int n): n_(n), fsize_(n), data_(n, -1) {}
 
 	int merge(int x, int y) {
 		assert(0<=x && x<n_);
@@ -19,6 +19,7 @@ public:
 		if (-data_[x] < -data_[y]) std::swap(x, y);
 		data_[x] += data_[y];
 		data_[y] = x;
+		fsize_--;
 		return x;
 	}
 
@@ -39,8 +40,13 @@ public:
 		return -data_[root(x)];
 	}
 
+	int forest_size() {
+		return fsize_;
+	}
+
 private:
-	int n_;
+	const int n_;
+	int fsize_;
 	std::vector<int> data_;
 };
 

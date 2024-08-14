@@ -16,7 +16,7 @@ veryclean:
 $(t).out: ./sol/$(t).cc
 	g++ -O2 -std=c++20 $<
 
-./sol/$(t).cc: $(t).cc
+./sol/$(t).cc: $(t).cc ./lib/*.h
 	./expand.sh $< $@
 
 %:
