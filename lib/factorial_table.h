@@ -1,3 +1,6 @@
+#ifndef LIB_FACTORIAL_TABLE_H_
+#define LIB_FACTORIAL_TABLE_H_
+
 #include <cassert>
 #include <vector>
 
@@ -14,19 +17,19 @@ public:
 		for (int i=n-1; i>=0; i--) ifac_[i] = ifac_[i+1]*(i+1);
 	}
 
-	T permutation(int n, int k) {
+	T permutation(int n, int k) const {
 		assert(0<=n && n<=n_);
 		assert(0<=k && k<=n);
 		return fac_[n]*ifac_[n-k];
 	}
 
-	T combination(int n, int k) {
+	T combination(int n, int k) const {
 		assert(0<=n && n<=n_);
 		assert(0<=k && k<=n);
 		return fac_[n]*ifac_[n-k]*ifac_[k];
 	}
 
-	T homogeneous(int n, int k) {
+	T homogeneous(int n, int k) const {
 		assert(0<=n && n<=n_);
 		assert(0<=k && k<=n);
 		return combination(n+k-1, k);
@@ -38,3 +41,5 @@ private:
 };
 
 } // namespace lib
+
+#endif // LIB_FACTORIAL_TABLE_H_
