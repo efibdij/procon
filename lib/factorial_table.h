@@ -30,8 +30,8 @@ public:
 	}
 
 	T homogeneous(int n, int k) const {
-		assert(0<=n && n<=n_);
-		assert(0<=k && k<=n);
+		assert(0<=k && k<=n_);
+		assert(0<=n && n+k-1<=n_);
 		return combination(n+k-1, k);
 	}
 

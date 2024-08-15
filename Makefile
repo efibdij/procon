@@ -14,7 +14,7 @@ veryclean:
 	rm -rf *.cc *.out sol
 
 $(t).out: ./sol/$(t).cc
-	g++ -O2 -std=c++20 $<
+	g++ -O2 -std=c++20 $< -o $@
 
 ./sol/$(t).cc: $(t).cc ./lib/*.h
 	./expand.sh $< $@

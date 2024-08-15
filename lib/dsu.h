@@ -40,7 +40,7 @@ public:
 		return -data_[root(x)];
 	}
 
-	int forest_size() {
+	int forest_size() const {
 		return fsize_;
 	}
 
